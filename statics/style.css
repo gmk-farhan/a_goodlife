@@ -3,39 +3,53 @@
     padding: 0;
 }
 nav{
-    background-color: #333333;
+    /* background-color: #333333; */
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1%;
 }
-a{
-    color: white;
+.right, .left{
+    /* background-color: #656565; */
+    padding: 2%;
+    width: 30%;
+    border-radius: 5%;
+    text-align: center;
+    a{
     text-decoration: none;
-}
-a:hover{
+    margin: 6%;
+    padding: 1%;
+    /* border-radius: 10%; */
+    color:#1B88B0;
+    /* color: white; */
+    }
+    a:hover{
     /* background-color: #b7afaf; */
 }
-/* .logo{
-    font-style: italic;
-    font-weight: bold;
-    a:hover{
-        background-color: none;
-    }
-} */
+}
 .logo img{
     width: 15vw;
 }
-footer{
-    position: relative;
-    bottom: 0;
-    width: 100%;
+footer{ 
     background-color: #333333;
     color: white;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
     .links{
-        text-align: right;
+        width:fit-content;
     }
-    .copyright{
-    text-align: center;
-}
+    .qlinks{
+    display: flex;
+    justify-content: right;
+    gap: 10%;
+    }
+    li{
+        list-style: none;
+        padding: 2%;
+    }
+    a{
+        color: #1B88B0;
+        text-decoration: none;
+    }
 }

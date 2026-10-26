@@ -8,26 +8,53 @@
 </head>
 <body>
     <nav>
-            <a href="./story.html">Story</a>
-            <a href="./trailer.html">Trailer</a>
-            <a href="./index.html" class="logo"><h1>A GOOD LIFE</h1></a>
-            <!-- <a href="" class="logo"><img src="../../../1.jpg" alt=""></a> -->
-            <a href="./bts.html">BTS</a>
-            <a href="./filmmakers.html">Filmmakers</a>
-        </nav>
-        <footer>
-            <h1>A GOOD LIFE</h1>
+            <section class="left">
+                <a href="./story.html">Story</a>
+                <a href="../templates/epk.html">EPK</a>
+                <a href="./trailer.html">Trailer</a>
+            </section>
+            <section class="center">
+                <a href="../templates/index.html" class="logo"><img src="../statics/A Good Life Logo.png" alt="logo"></a>
+            </section>
+            <section class="right">
+                <a href="./bts.html">BTS</a>
+                <a href="./filmmakers.html">Filmmakers</a>
+                <a href="../templates/contact.html">Contact Us</a>
+            </section>
+    </nav>
+    <main>
+        <h1>Contact Us</h1>
+        <form action="">
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name" placeholder="John"><br>
+            <label for="mail">Email</label><br>
+            <input type="email" name="mail" id="mail" placeholder="john@gmail.com"><br>
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message" placeholder="Type Message"></textarea><br><br>
+            <button type="reset">Clear</button>
+            <button type="submit">Sent</button>
+        </form>
+    </main>
+    <footer>
+            <section class="footer1">
+                <a href="../templates/index.html" class="logo"><img src="../statics/A Good Life Logo.png" alt="logo"></a>
+            </section>
             <section class="links">
                 <h3>Quick Links</h3>
-                <ul>
+                <section class="qlinks">
+                    <ul>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./story.html">Story</a></li>
+                    <li><a href="../templates/epk.html">EPK</a></li>
                     <li><a href="./trailer.html">Trailer</a></li>
+                </ul>
+                <ul>
                     <li><a href="./bts.html">BTS</a></li>
                     <li><a href="./filmmakers.html">Filmmakers</a></li>
+                    <li><a href="../templates/contact.html">Contact Us</a></li>
                 </ul>
+                </section>
             </section>
-            <p class="copyright">Copyright resereved by SAE Institue 2026</p>
-        </footer>
+    </footer>
 </body>
 </html>
