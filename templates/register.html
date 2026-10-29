@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='register_style.css')}}">
+</head>
+<body>
+    <nav>
+            <section class="left">
+                <a href="/story">Story</a>
+                <a href="/epk">EPK</a>
+                <a href="/trailer">Trailer</a>
+            </section>
+            <section class="center">
+                <a href="/" class="logo"><img src="{{url_for('static', filename='A Good Life Logo.png')}}" alt="logo"></a>
+            </section>
+            <section class="right">
+                <a href="/bts">BTS</a>
+                <a href="/filmmakers">Filmmakers</a>
+                <a href="/contact">Contact Us</a>
+            </section>
+    </nav>
+    <main>
+        <h1>Registration</h1>
+        <p class="error">{{msg}}</p>
+        <p class="msg">{{smsg}}</p>
+        <form action="/register" method="POST">
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name"><br>
+            <label for="mail">Email</label><br>
+            <input type="email" name="mail" id="mail"><br>
+            <label for="profession">Profession</label><br>
+            <select name="profession" id="profession">
+                <option value="student">Student</option>
+                <option value="actor">Actor</option>
+                <option value="director">Director</option>
+                <option value="audience">Audience</option>
+                <option value="others">Others</option>
+            </select><br>
+            <label for="password">Password</label><br>
+            <input type="password" name="password" id="password"><br>
+            <label for="cpassword">Confirm Password</label><br>
+            <input type="password" name="cpassword" id="cpassword"><br>
+            <p>Already Registered? <a href="/login">Log In</a></p>
+            <br>
+            <button type="submit">Sign Up</button>
+            <button type="reset">Clear</button>
+        </form>
+    </main>
+    <footer>
+            <section class="footer1">
+                <a href="/" class="logo"><img src="{{url_for('static', filename='A Good Life Logo.png')}}" alt="logo"></a>
+            </section>
+            <section class="links">
+                <h3>Quick Links</h3>
+                <section class="qlinks">
+                    <ul>
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/story">Story</a></li>
+                    <li><a href="/epk">EPK</a></li>
+                    <li><a href="/trailer">Trailer</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/bts">BTS</a></li>
+                    <li><a href="/filmmakers">Filmmakers</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+                </section>
+            </section>
+    </footer>
+</body>
+</html>

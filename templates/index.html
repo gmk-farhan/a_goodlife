@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="../statics/style.css">
-    <link rel="stylesheet" href="../statics/index_style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='index_style.css')}}">
 </head>
     <body>
         <nav>
             <section class="left">
-                <a href="./story.html">Story</a>
-                <a href="../templates/epk.html">EPK</a>
-                <a href="./trailer.html">Trailer</a>
+                <a href="/story">Story</a>
+                <a href="/epk">EPK</a>
+                <a href="/trailer">Trailer</a>
             </section>
             <section class="center">
-                <a href="../templates/index.html" class="logo"><img src="../statics/A Good Life Logo.png" alt="logo"></a>
+                <a href="/" class="logo"><img src="{{url_for('static', filename='A Good Life Logo.png')}}" alt="logo"></a>
             </section>
             <section class="right">
-                <a href="./bts.html">BTS</a>
-                <a href="./filmmakers.html">Filmmakers</a>
-                <a href="../templates/contact.html">Contact Us</a>
+                <a href="/bts">BTS</a>
+                <a href="/filmmakers">Filmmakers</a>
+                <a href="/contact">Contact Us</a>
             </section>
         </nav>
         <section class="main">
             <section class="poster">
-                <img src="../statics/img.webp" alt="">
+                <img src="{{url_for('static', filename='img.webp')}}" alt="poster">
             </section>
         </section>
         <section class="info">
-                <img src="../statics/img.webp" alt="">
+                <img src="{{url_for('static', filename='img.webp')}}" alt="">
                 <section class="text">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt numquam veritatis est veniam fugit odit sit doloribus molestias, quia consectetur commodi reprehenderit vitae quibusdam unde eveniet possimus sequi? Cum illum, nam blanditiis fugit ullam unde eaque? Distinctio officia minima voluptate fugit ut, tenetur nesciunt eveniet autem deserunt esse impedit id!</p>
                 </section>
@@ -38,7 +38,7 @@
                 <section class="text">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt numquam veritatis est veniam fugit odit sit doloribus molestias, quia consectetur commodi reprehenderit vitae quibusdam unde eveniet possimus sequi? Cum illum, nam blanditiis fugit ullam unde eaque? Distinctio officia minima voluptate fugit ut, tenetur nesciunt eveniet autem deserunt esse impedit id!</p>
                 </section>
-                <img src="../statics/img.webp" alt="">
+                <img src="{{url_for('static', filename='img.webp')}}" alt="">
         </section>
         <section class="next">
             <section class="box1">
@@ -46,7 +46,7 @@
                 <section class="ig">
                     <!-- <img src="../statics/img.webp" alt="image1"> -->
                 </section>
-                <h4>What to Know Story?<a href="../templates/story.html">Click Here</a></h4>
+                <h4>What to Know Story?<a href="/story">Click Here</a></h4>
             </section>
             <section class="box1">
                 <section class="try">
@@ -55,27 +55,27 @@
 
                     </section>
                 <!-- <img src="../statics/img.webp" alt="image1"> -->
-                <h4>Trailer <a href="../templates/story.html">Watch Trailer</a></h4>
+                <h4>Trailer <a href="/trailer">Watch Trailer</a></h4>
                 </section>
             </section>
         </section>
         <footer>
             <section class="footer1">
-                <a href="../templates/index.html" class="logo"><img src="../statics/A Good Life Logo.png" alt="logo"></a>
+                <a href="/" class="logo"><img src="{{url_for('static', filename='A Good Life Logo.png')}}" alt="logo"></a>
             </section>
             <section class="links">
                 <h3>Quick Links</h3>
                 <section class="qlinks">
                     <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./story.html">Story</a></li>
-                    <li><a href="../templates/epk.html">EPK</a></li>
-                    <li><a href="./trailer.html">Trailer</a></li>
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/story">Story</a></li>
+                    <li><a href="/epk">EPK</a></li>
+                    <li><a href="/trailer">Trailer</a></li>
                 </ul>
                 <ul>
-                    <li><a href="./bts.html">BTS</a></li>
-                    <li><a href="./filmmakers.html">Filmmakers</a></li>
-                    <li><a href="../templates/contact.html">Contact Us</a></li>
+                    <li><a href="/bts">BTS</a></li>
+                    <li><a href="/filmmakers">Filmmakers</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
                 </ul>
                 </section>
             </section>

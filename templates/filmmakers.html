@@ -4,30 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filmmakers</title>
-    <link rel="stylesheet" href="../statics/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 <body>
     <nav>
-            <a href="./story.html">Story</a>
-            <a href="./trailer.html">Trailer</a>
-            <a href="./index.html" class="logo"><h1>A GOOD LIFE</h1></a>
-            <!-- <a href="" class="logo"><img src="../../../1.jpg" alt=""></a> -->
-            <a href="./bts.html">BTS</a>
-            <a href="./filmmakers.html">Filmmakers</a>
+            <section class="left">
+                <a href="/story">Story</a>
+                <a href="/epk">EPK</a>
+                <a href="/trailer">Trailer</a>
+            </section>
+            <section class="center">
+                <a href="/" class="logo"><img src="{{url_for('static', filename='A Good Life Logo.png')}}" alt="logo"></a>
+            </section>
+            <section class="right">
+                <a href="/bts">BTS</a>
+                <a href="/filmmakers">Filmmakers</a>
+                <a href="/contact">Contact Us</a>
+            </section>
         </nav>
         <footer>
-            <h1>A GOOD LIFE</h1>
+            <section class="footer1">
+                <a href="/" class="logo"><img src="{{url_for('static', filename='A Good Life Logo.png')}}" alt="logo"></a>
+            </section>
             <section class="links">
                 <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./story.html">Story</a></li>
-                    <li><a href="./trailer.html">Trailer</a></li>
-                    <li><a href="./bts.html">BTS</a></li>
-                    <li><a href="./filmmakers.html">Filmmakers</a></li>
+                <section class="qlinks">
+                    <ul>
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/story">Story</a></li>
+                    <li><a href="/epk">EPK</a></li>
+                    <li><a href="/trailer">Trailer</a></li>
                 </ul>
+                <ul>
+                    <li><a href="/bts">BTS</a></li>
+                    <li><a href="/filmmakers">Filmmakers</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+                </section>
             </section>
-            <p class="copyright">Copyright resereved by SAE Institue 2026</p>
         </footer>
 </body>
 </html>

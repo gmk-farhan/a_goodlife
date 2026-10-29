@@ -1,0 +1,9 @@
+main{
+    text-align: center;
+    .error{
+        color: red;
+    }
+    .msg{
+        color: green;
+    }
+}

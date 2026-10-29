@@ -1,0 +1,20 @@
+form{
+    margin: 10px auto;
+    input, textarea{
+        width: 30%;
+    }
+}
+.error{
+    color: red;
+}
+.smsg{
+    color: green;
+}
+main{
+    text-align: center;
+}
+/* .form{
+    border: 2px solid black;
+    width: 60%;
+    margin: 2%;
+} */
