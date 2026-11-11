@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press Kit</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='index_style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{ url_for('static', filename='jquery/jquery-3.7.1.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/script.js') }}"></script>
+</head>
+    <body>
+        <nav id="nav">
+            <section class="left">
+                <a href="/story">Story</a>
+                <a href="/epk">EPK</a>
+                <a href="/trailer">Trailer</a>
+            </section>
+            <section class="center">
+                <a href="/" class="logo"><img src="{{url_for('static', filename='A Good Life Logo.png')}}" alt="logo"></a>
+            </section>
+            <section class="right">
+                <a href="/bts">BTS</a>
+                <a href="/filmmakers">Filmmakers</a>
+                <a href="/contact">Contact Us</a>
+            </section>
+            <section class="ham" onclick="ham(this)" id="ham">
+                <section class="bar1"></section>
+                <section class="bar2"></section>
+                <section class="bar3"></section>
+            </section>
+        </nav><hr>
+        <section id="ham_menu" class="ham_menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/story">Story</a></li>
+                <li><a href="/epk">EPK</a></li>
+                <li><a href="/trailer">Trailer</a></li>
+                <li><a href="/bts">BTS</a></li>
+                <li><a href="/filmmakers">Filmmakers</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+        </section>
+        <main>
+            <section class="epk">
+                <button type="submit">Download Now</button>
+            </section>
+            <section class="story">
+                <h1>Short Description</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, suscipit maxime quam recusandae iusto aliquid nisi vel itaque est? Id, fuga eaque. Adipisci maiores mollitia maxime magnam amet enim pariatur consectetur a, ullam sed modi aliquam animi debitis laudantium, magni, porro nemo. Voluptatibus mollitia nostrum, modi excepturi perspiciatis possimus reiciendis quas illo aperiam fugit vel vero quam fuga saepe vitae, eos, laboriosam officia. Veritatis deleniti, rem non quia cupiditate eum ea ipsa suscipit incidunt dicta facere ut eaque quasi odit molestias doloremque explicabo numquam fuga dolores quam. Possimus, voluptas amet enim ducimus, quisquam molestiae distinctio reprehenderit quod magni tempora ad.</p>
+            </section>
+        </main>
+         <section class="accessibility">
+            <ul id="list">
+                <li><a href="#" id="lightMode">Light Mode</a></li><br>
+                <li><a href="#" id="darkMode">Dark Mode</a></li><br>
+                <li><a href="#nav">Back to top</a></li>
+            </ul>
+            <button type="submit" id="btn"><i style='font-size:32px' class='fa fa-universal-access'></i></button>
+        </section>
+        <footer>
+            <section class="footer1">
+                <a href="/" class="logo"><img src="{{url_for('static', filename='A Good Life Logo.png')}}" alt="logo"></a>
+            </section>
+            <section class="links">
+                <h3>Quick Links</h3>
+                <section class="qlinks">
+                    <ul>
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/story">Story</a></li>
+                    <li><a href="/epk">EPK</a></li>
+                    <li><a href="/trailer">Trailer</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/bts">BTS</a></li>
+                    <li><a href="/filmmakers">Filmmakers</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+                </section>
+            </section>
+        </footer>
+    </body>
+</html>
