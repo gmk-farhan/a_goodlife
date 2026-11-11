@@ -1,3 +1,27 @@
 .epk{
-    
+    margin: 2px auto;
+    width: 95%;
+    height: 80vh;
+    /* border: 2px solid black; */
+    background-image: url(images/Ref\ Image\ 3.jpeg);
+    background-size: cover;
+    border-radius: 5%;
+    background-position:center;
+
+    button{
+        position:absolute;
+        top: 50%;
+        right: 5%;
+    }
+}
+@media print{
+    nav{
+        display: none;
+    }
+    footer, .accessibility, .epk{
+        display: none;
+    }
+    img{
+        /* display: none; */
+    }
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Press Kit</title>
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='index_style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='epk_style.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="{{ url_for('static', filename='jquery/jquery-3.7.1.js') }}"></script>
     <script src="{{ url_for('static', filename='script/script.js') }}"></script>
@@ -41,8 +41,10 @@
                 <li><a href="/contact">Contact Us</a></li>
         </section>
         <main>
+            <h1>Press Kit</h1>
             <section class="epk">
-                <button type="submit">Download Now</button>
+                <!-- <a href="/download"></a> -->
+                <button type="button" class="download">Download Now <i class="fa fa-download" style="font-size:24px"></i></button>
             </section>
             <section class="story">
                 <h1>Short Description</h1>
@@ -78,5 +80,11 @@
                 </section>
             </section>
         </footer>
+        <script>
+            const download=document.querySelector(".download");
+            download.addEventListener("click", ()=>{
+                print();
+            })
+        </script>
     </body>
 </html>

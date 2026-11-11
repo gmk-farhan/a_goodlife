@@ -35,6 +35,10 @@ def index():
 @app.route("/story")
 def story():
     return render_template("story.html")
+# @app.route("/download")
+# def download():
+#     if 
+#     return render_template("epk.html")
 @app.route("/epk")
 def epk():
     return render_template("epk.html")

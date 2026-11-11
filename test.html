@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 320px;
+}
+
+.modal-content input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 24px;
+}
+</style>
+</head>
+<body>
+  
+<button id="registerBtn">Register</button>
+
+<!-- Registration Modal -->
+<div id="registerModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Register</h2>
+
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Create Account</button>
+    </form>
+  </div>
+</div>
+
+
+<script>
+const modal = document.getElementById("registerModal");
+
+document.getElementById("registerBtn").onclick = () => {
+  modal.style.display = "flex";
+};
+
+document.querySelector(".close").onclick = () => {
+  modal.style.display = "none";
+};
+
+window.onclick = (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+</script>
+
+</body>
+</html>
