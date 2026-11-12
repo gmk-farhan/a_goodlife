@@ -11,26 +11,23 @@
     <script src="{{ url_for('static', filename='script/script.js') }}"></script>
 </head>
     <body>
-        <nav id="nav">
-            <section class="left">
+        <nav id="nav" class="site-header">
+            <a href="/" class="brand">A Good Life</a>
+            <section class="main-nav">
+                <a href="/" class="active">Home</a>
                 <a href="/story">Story</a>
                 <a href="/epk">EPK</a>
-                <a href="/trailer">Trailer</a>
-            </section>
-            <section class="center">
-                <a href="/" class="logo"><img src="{{url_for('static', filename='A Good Life Logo.png')}}" alt="logo"></a>
-            </section>
-            <section class="right">
                 <a href="/bts">BTS</a>
                 <a href="/filmmakers">Filmmakers</a>
                 <a href="/contact">Contact Us</a>
             </section>
+            <a href="/trailer" class="trailer-action"><span>Trailer</span><span>&rarr;</span></a>
             <section class="ham" onclick="ham(this)" id="ham">
                 <section class="bar1"></section>
                 <section class="bar2"></section>
                 <section class="bar3"></section>
             </section>
-        </nav><hr>
+        </nav>
         <section id="ham_menu" class="ham_menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/story">Story</a></li>
@@ -40,42 +37,106 @@
                 <li><a href="/filmmakers">Filmmakers</a></li>
                 <li><a href="/contact">Contact Us</a></li>
         </section>
-        <section class="main">
-            <section class="poster">
-                <img src="{{url_for('static', filename='img.webp')}}" alt="poster">
-            </section>
-        </section>
-        <section class="info">
-                <img src="{{url_for('static', filename='img.webp')}}" alt="">
-                <section class="text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt numquam veritatis est veniam fugit odit sit doloribus molestias, quia consectetur commodi reprehenderit vitae quibusdam unde eveniet possimus sequi? Cum illum, nam blanditiis fugit ullam unde eaque? Distinctio officia minima voluptate fugit ut, tenetur nesciunt eveniet autem deserunt esse impedit id!</p>
-                </section>
-        </section>
-        <section class="info">
-                <section class="text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt numquam veritatis est veniam fugit odit sit doloribus molestias, quia consectetur commodi reprehenderit vitae quibusdam unde eveniet possimus sequi? Cum illum, nam blanditiis fugit ullam unde eaque? Distinctio officia minima voluptate fugit ut, tenetur nesciunt eveniet autem deserunt esse impedit id!</p>
-                </section>
-                <img src="{{url_for('static', filename='img.webp')}}" alt="">
-        </section>
-        <section class="next">
-            <section class="box1">
-                <h2>Story</h2>
-                <section class="ig">
-                    <!-- <img src="{{url_for('static', filename='img.webp')}}" style="width: 100px; height: 100px;" alt="image1"> -->
-                </section>
-                <h4>What to Know Story?<a href="/story">Click Here</a></h4>
-            </section>
-            <section class="box1">
-                <section class="try">
-                    <h2>Trailer</h2>
-                    <section class="ig">
 
-                    </section>
-                <!-- <img src="{{url_for('static', filename='img.webp')}}" alt="image1" style="width: 100px; height: 100px;"> -->
-                <h4>Trailer <a href="/trailer">Watch Trailer</a></h4>
+        <section class="hero">
+            <section class="hero-bg"></section>
+            <section class="hero-scrim"></section>
+            <section class="label"><span class="marker"></span><span class="kicker">A film by Good Life Studio</span></section>
+            <section class="hero-intro">
+                <h1 class="film-title">A Good Life</h1>
+                <section class="film-actions">
+                    <a href="/trailer" class="editorial-link"><span class="link-label">Watch the trailer</span><span class="link-arrow">&rarr;</span></a>
+                    <p class="premise">Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </section>
+            </section>
+            <section class="hero-notes">
+                <span>Drama &middot; Story</span>
+                <span>Scroll</span>
+                <span>Feature film</span>
+            </section>
+        </section>
+
+        <section class="introduction">
+            <section class="intro-heading">
+                <section class="label"><span class="marker"></span><span class="kicker">Introduction</span></section>
+                <h2>Lorem ipsum dolor sit amet consectetur</h2>
+            </section>
+            <section class="intro-prose">
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt numquam veritatis est veniam fugit odit sit doloribus molestias, quia consectetur commodi reprehenderit vitae quibusdam unde eveniet possimus sequi? Cum illum, nam blanditiis fugit ullam unde eaque?</p>
+                <a href="/story" class="editorial-link blue"><span class="link-label">Read the story</span><span class="link-arrow">&rarr;</span></a>
+            </section>
+        </section>
+
+        <section class="gallery">
+            <section class="gallery-intro">
+                <section class="label"><span class="marker"></span><span class="kicker">Gallery</span></section>
+                <h2>Lorem ipsum dolor sit amet</h2>
+            </section>
+            <section class="stills">
+                <figure class="still">
+                    <img src="{{url_for('static', filename='img.webp')}}" alt="Film still 1">
+                    <figcaption><span class="caption">Lorem ipsum dolor</span><span class="frame">01</span></figcaption>
+                </figure>
+                <figure class="still tall">
+                    <img src="{{url_for('static', filename='img.webp')}}" alt="Film still 2">
+                    <figcaption><span class="caption">Consectetur elit</span><span class="frame">02</span></figcaption>
+                </figure>
+                <figure class="still">
+                    <img src="{{url_for('static', filename='img.webp')}}" alt="Film still 3">
+                    <figcaption><span class="caption">Sed do eiusmod</span><span class="frame">03</span></figcaption>
+                </figure>
+            </section>
+        </section>
+
+        <section class="reflection">
+            <section class="label"><span class="marker"></span><span class="kicker">Story reflection</span></section>
+            <blockquote class="quotation">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.&rdquo;</blockquote>
+            <p class="attribution">Lorem Ipsum, Director</p>
+        </section>
+
+        <section class="characters">
+            <section class="characters-intro">
+                <section class="section-heading">
+                    <section class="label"><span class="marker"></span><span class="kicker">Characters</span></section>
+                    <h2>Lorem ipsum dolor</h2>
+                </section>
+                <a href="/story" class="editorial-link blue"><span class="link-label">All characters</span><span class="link-arrow">&rarr;</span></a>
+            </section>
+            <section class="portraits">
+                <article class="character">
+                    <img src="{{url_for('static', filename='img.webp')}}" alt="Character 1">
+                    <h3>Character One</h3>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit nesciunt numquam.</p>
+                </article>
+                <article class="character">
+                    <img src="{{url_for('static', filename='img.webp')}}" alt="Character 2">
+                    <h3>Character Two</h3>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit nesciunt numquam.</p>
+                </article>
+            </section>
+        </section>
+
+        <section class="discoveries">
+            <section class="teaser">
+                <img src="{{url_for('static', filename='img.webp')}}" alt="Behind the scenes">
+                <section class="teaser-text">
+                    <section class="label"><span class="marker"></span><span class="kicker">Behind the scenes</span></section>
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt numquam veritatis est veniam fugit odit sit doloribus molestias.</p>
+                    <a href="/bts" class="editorial-link blue"><span class="link-label">See BTS</span><span class="link-arrow">&rarr;</span></a>
+                </section>
+            </section>
+            <section class="teaser reverse">
+                <img src="{{url_for('static', filename='img.webp')}}" alt="Filmmakers">
+                <section class="teaser-text">
+                    <section class="label"><span class="marker"></span><span class="kicker">Filmmakers</span></section>
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt numquam veritatis est veniam fugit odit sit doloribus molestias.</p>
+                    <a href="/filmmakers" class="editorial-link blue"><span class="link-label">Meet the filmmakers</span><span class="link-arrow">&rarr;</span></a>
                 </section>
             </section>
         </section>
+
         <section class="accessibility">
             <ul id="list">
                 <li><a href="#" id="lightMode">Light Mode</a></li><br>
@@ -84,24 +145,26 @@
             </ul>
             <button type="submit" id="btn"><i style='font-size:32px' class='fa fa-universal-access'></i></button>
         </section>
-        <footer>
-            <section class="footer1">
-                <a href="/" class="logo"><img src="{{url_for('static', filename='A Good Life Logo.png')}}" alt="logo"></a>
+
+        <footer class="site-footer">
+            <section class="signature">
+                <a href="/" class="brand">A Good Life</a>
+                <p class="tagline">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </section>
-            <section class="links">
-                <h3>Quick Links</h3>
-                <section class="qlinks">
-                    <ul>
-                    <li><a href="/index">Home</a></li>
-                    <li><a href="/story">Story</a></li>
-                    <li><a href="/epk">EPK</a></li>
-                    <li><a href="/trailer">Trailer</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/bts">BTS</a></li>
-                    <li><a href="/filmmakers">Filmmakers</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
-                </ul>
+            <section class="footer-links">
+                <a href="/">Home</a>
+                <a href="/story">Story</a>
+                <a href="/epk">EPK</a>
+                <a href="/trailer">Trailer</a>
+                <a href="/bts">BTS</a>
+                <a href="/filmmakers">Filmmakers</a>
+                <a href="/contact">Contact Us</a>
+            </section>
+            <section class="legal">
+                <hr>
+                <section class="notice">
+                    <span>&copy; 2026 A Good Life. All rights reserved.</span>
+                    <span>All film materials are placeholders.</span>
                 </section>
             </section>
         </footer>
