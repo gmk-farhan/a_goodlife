@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}A Good Life{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+    {% block styles %}{% endblock %}
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="/">A GOOD LIFE.</a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+            <a href="/" {% if request.endpoint == 'index' %}class="active" aria-current="page"{% endif %}>Home</a>
+            <a href="/story" {% if request.endpoint == 'story' %}class="active" aria-current="page"{% endif %}>The story</a>
+            <a href="/trailer"  {% if request.endpoint == 'trailer' %}class="active" aria-current="page"{% endif %}>Trailer</a>
+            <a href="/#characters">Cast &amp; characters</a>
+            <a href="/bts"  {% if request.endpoint == 'bts' %}class="active" aria-current="page"{% endif %}>BTS</a>
+            <a href="/filmmakers"  {% if request.endpoint == 'filmmakers' %}class="active" aria-current="page"{% endif %}>Filmmakers</a>
+        </nav>
+        <a class="trailer-button" href="/trailer">Watch trailer <span aria-hidden="true">&nearr;</span></a>
+        <details class="mobile-menu">
+            <summary>Menu</summary>
+            <nav aria-label="Mobile navigation">
+                <a href="/">Home</a>
+                <a href="/story">The story</a>
+                <a href="/trailer">Trailer</a>
+                <a href="/#characters">Cast &amp; characters</a>
+                <a href="/bts">BTS</a>
+                <a href="/filmmakers">Filmmakers</a>
+                <a href="/epk">EPK</a>
+                <a href="/contact">Contact us</a>
+            </nav>
+        </details>
+    </header>
+
+    <main>
+        {% block content %}
+        <section class="hero" aria-labelledby="film-title">
+            <div class="hero-image">
+                <p class="eyebrow hero-label">A story about finding what truly matters</p>
+                <h1 id="film-title">A<br>GOOD<br>LIFE</h1>
+            </div>
+            <div class="hero-copy">
+                <a class="text-link" href="/story">Discover the story <span aria-hidden="true">&nearr;</span></a>
+                <p>Sometimes, the life you're looking<br class="desktop-break"> for is the one you already have.</p>
+                <div class="hero-meta"><span>Dreams / connections / second chances</span><span>Explore the film &darr;</span><span>An independent film</span></div>
+            </div>
+        </section>
+
+        <section class="introduction page-section">
+            <div>
+                <p class="eyebrow">Not just a film. A feeling.</p>
+                <h2>A little hope. A<br>whole lot of life.</h2>
+            </div>
+            <div class="intro-copy">
+                <p>In a world that never stops asking for more, A Good Life pauses to ask a simpler question: what is enough? An intimate story of dreams, unexpected connections, and the quiet courage it takes to begin again.</p>
+                <a class="text-link blue" href="/story">Step inside the story <span aria-hidden="true">&nearr;</span></a>
+            </div>
+        </section>
+
+        <section class="gallery page-section">
+            <p class="eyebrow">Through the lens</p>
+            <h2>Life, one frame at a time.</h2>
+            <div class="stills">
+                <figure>
+                    <img src="{{ url_for('static', filename='home-city.jpg') }}" alt="A person looking out over a city at sunset">
+                    <figcaption><span>A city full of possibility</span><span>01</span></figcaption>
+                </figure>
+                <figure class="tall">
+                    <img src="{{ url_for('static', filename='home-dreamer.jpg') }}" alt="Two people sharing a moment at a table">
+                    <figcaption><span>The moments in between</span><span>02</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="{{ url_for('static', filename='home-optimist.jpg') }}" alt="A woman standing in a room">
+                    <figcaption><span>A different kind of hope</span><span>03</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="reflection">
+            <p class="eyebrow">At the heart of A Good Life</p>
+            <blockquote>&ldquo;Maybe a good life isn't somewhere else.<br>Maybe it's right here.&rdquo;</blockquote>
+            <p>A thought from the story</p>
+        </section>
+
+        <section class="characters page-section" id="characters">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">The people in the story</p>
+                    <h2>Familiar faces. Unforgettable lives.</h2>
+                </div>
+                <a class="text-link blue" href="/story">Explore the story <span aria-hidden="true">&nearr;</span></a>
+            </div>
+            <div class="portraits">
+                <article>
+                    <img src="{{ url_for('static', filename='home-dreamer.jpg') }}" alt="Two people sitting together at a table">
+                    <h3>The dreamer</h3>
+                    <p>Caught between the life he knows and the future he imagines.</p>
+                </article>
+                <article>
+                    <img src="{{ url_for('static', filename='home-optimist.jpg') }}" alt="A woman in a red shirt">
+                    <h3>The quiet optimist</h3>
+                    <p>A different perspective. A reminder to notice what's already here.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="discoveries page-section">
+            <article class="teaser">
+                <img src="{{ url_for('static', filename='home-behind-scenes.jpg') }}" alt="The film crew at work">
+                <div>
+                    <p class="eyebrow">Beyond the frame</p>
+                    <h2>The making of a moment.</h2>
+                    <p>The people, places, and small discoveries behind the camera.</p>
+                    <a class="text-link blue" href="/bts">Go behind the scenes <span aria-hidden="true">&nearr;</span></a>
+                </div>
+            </article>
+            <article class="teaser reverse">
+                <img src="{{ url_for('static', filename='home-city.jpg') }}" alt="A person overlooking the city at sunset">
+                <div>
+                    <p class="eyebrow">The creative team</p>
+                    <h2>A story told together.</h2>
+                    <p>Meet the creative team bringing the world of A Good Life to the screen.</p>
+                    <a class="text-link blue" href="/filmmakers">Meet the filmmakers <span aria-hidden="true">&nearr;</span></a>
+                </div>
+            </article>
+        </section>
+        {% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <a class="brand" href="/">A GOOD LIFE.</a>
+            <p>An ordinary life. An<br>extraordinary journey.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+            <a href="/story">Story</a>
+            <a href="/trailer">Trailer</a>
+            <a href="/epk">EPK</a>
+            <a href="/bts">BTS</a>
+            <a href="/filmmakers">Filmmakers</a>
+            <a href="/contact">Contact us</a>
+        </nav>
+        <div class="footer-bottom">
+            <span>&copy; 2026 A Good Life. All rights reserved.</span>
+            <span>An independent film.</span>
+        </div>
+    </footer>
+</body>
+</html>

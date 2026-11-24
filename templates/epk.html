@@ -1,3 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}EPK | A Good Life{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='epk_style.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block content %}
+<h1>Press Kit</h1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,6 +106,13 @@
                 </p>
             </section>
             </section>
+<script>
+const download=document.querySelector(".download");
+            download.addEventListener("click", ()=>{
+                print();
+            })
+</script>
+{% endblock %}
             <!-- CLOSING BANNER -->
             <section class="message">
         <div class="label">

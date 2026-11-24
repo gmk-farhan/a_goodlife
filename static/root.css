@@ -1,0 +1,64 @@
+/* Shared design tokens keep project-wide colors, spacing, and typography consistent. */
+:root {
+    --color-primary: #333333;
+    --color-surface: #FFFFFF;
+    --color-text: #000000;
+    --color-link: #000000;
+    --color-link-light: #FFFFFF;
+    --color-link-accent: #0000FF;
+    --color-shadow: #CCCCCC;
+
+    --font-family-base: Arial, Helvetica, sans-serif;
+    --font-size-base: 1rem;
+    --font-size-sm: 0.875rem;
+    --font-size-lg: 1.125rem;
+    --font-size-h1: 3.5rem;
+
+    --spacing-unit: 1rem;
+    --container-max: 1440px;
+    --gutter-desktop: 72px;
+    --gutter-mobile: 20px;
+}
+
+/* Reset browser spacing so page layouts start from a consistent baseline. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Provide shared page defaults while allowing component styles to override them. */
+body {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+}
+
+/* Typography styles for headings and paragraphs */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-base);
+    margin-bottom: var(--spacing-unit);
+}
+
+p {
+    font-family: var(--font-family-base);
+    margin-bottom: var(--spacing-unit);
+}
+
+.page-eyebrow {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    margin-bottom: var(--spacing-unit);
+}
+
+.page-lead {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-lg);
+    font-style: italic;
+    margin-bottom: var(--spacing-unit);
+}

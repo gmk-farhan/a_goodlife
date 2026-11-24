@@ -1,3 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Story | A Good Life{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='story_style.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="container">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -141,35 +151,5 @@
                 </figure>
             </section>
         </section>
-        </main>
-        <section class="accessibility">
-            <ul id="list">
-                <li><a href="#" id="lightMode">Light Mode</a></li><br>
-                <li><a href="#" id="darkMode">Dark Mode</a></li><br>
-                <li><a href="#nav">Back to top</a></li>
-            </ul>
-            <button type="submit" id="btn"><i style='font-size:32px' class='fa fa-universal-access'></i></button>
-        </section>
-        <footer>
-            <section class="footer1">
-                <a href="/" class="logo"><img src="{{url_for('static', filename='A Good Life Logo.png')}}" alt="logo"></a>
-            </section>
-            <section class="links">
-                <h3>Quick Links</h3>
-                <section class="qlinks">
-                    <ul>
-                    <li><a href="/index">Home</a></li>
-                    <li><a href="/story">Story</a></li>
-                    <li><a href="/epk">EPK</a></li>
-                    <li><a href="/trailer">Trailer</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/bts">BTS</a></li>
-                    <li><a href="/filmmakers">Filmmakers</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
-                </ul>
-                </section>
-            </section>
-        </footer>
-</body>
-</html>
+{% endblock %}
+          </html>
