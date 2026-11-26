@@ -86,7 +86,7 @@ def contact():
             msg='Message Sent Successfully'
             return render_template("contact.html", smsg=msg)
     else:
-        print("error")
+        print("error"), 404
 
 # registration page 
 @app.route("/register", methods=['GET', 'POST'])
@@ -125,7 +125,7 @@ def register():
             send_from_directory(FOLDER, "sample.pdf", as_attachment=True, download_name="sample.pdf")
             return render_template("register.html", smsg=msg)
     else:
-        print("error")
+        print("error"), 404
 
 #log in page
 @app.route("/login", methods=["GET","POST"])
@@ -157,6 +157,6 @@ def login():
             msg="Invalid user details"
             return render_template("login.html",msg=msg)
     else:
-         print("error")
+         print("error"), 404
 if __name__=="__main__": 
     app.run(debug=True)

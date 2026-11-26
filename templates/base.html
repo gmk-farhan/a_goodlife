@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}A Good Life{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+    <link rel="stylesheet" href="{{url_for('static', filename='index_style.css') }}">
     {% block styles %}{% endblock %}
 </head>
 <body>
     <header class="site-header">
-        <a class="brand" href="/">A GOOD LIFE.</a>
+        <a class="brand" href="/"><img src="{{url_for('static', filename='images/AGoodLife_Logo.png')}}" alt="logo"></a>
         <nav class="desktop-nav" aria-label="Main navigation">
             <a href="/" {% if request.endpoint == 'index' %}class="active" aria-current="page"{% endif %}>Home</a>
-            <a href="/story" {% if request.endpoint == 'story' %}class="active" aria-current="page"{% endif %}>The story</a>
+            <a href="/story" {% if request.endpoint == 'story' %}class="active" aria-current="page"{% endif %}>The Story</a>
+            <a href="/epk" {% if request.endpoint == 'epk' %}class="active" aria-current="page"{% endif %}>EPK</a>
             <a href="/trailer"  {% if request.endpoint == 'trailer' %}class="active" aria-current="page"{% endif %}>Trailer</a>
-            <a href="/#characters">Cast &amp; characters</a>
-            <a href="/bts"  {% if request.endpoint == 'bts' %}class="active" aria-current="page"{% endif %}>BTS</a>
-            <a href="/filmmakers"  {% if request.endpoint == 'filmmakers' %}class="active" aria-current="page"{% endif %}>Filmmakers</a>
+            <a href="/bts"  {% if request.endpoint == 'bts' %}class="active" aria-current="page"{% endif %}>Behind The Scenes</a>
+            <a href="/filmmakers"  {% if request.endpoint == 'filmmakers' %}class="active" aria-current="page"{% endif %}>Our Team</a>
         </nav>
         <a class="trailer-button" href="/trailer">Watch trailer <span aria-hidden="true">&nearr;</span></a>
         <details class="mobile-menu">
             <summary>Menu</summary>
             <nav aria-label="Mobile navigation">
                 <a href="/">Home</a>
-                <a href="/story">The story</a>
+                <a href="/story">The Story</a>
                 <a href="/trailer">Trailer</a>
-                <a href="/#characters">Cast &amp; characters</a>
-                <a href="/bts">BTS</a>
-                <a href="/filmmakers">Filmmakers</a>
                 <a href="/epk">EPK</a>
-                <a href="/contact">Contact us</a>
+                <a href="/bts">Behind the Scenes</a>
+                <a href="/filmmakers">Our Team</a>
+                <a href="/contact">Contact Us</a>
             </nav>
         </details>
     </header>
@@ -131,16 +130,17 @@
 
     <footer class="site-footer">
         <div class="footer-top">
-            <a class="brand" href="/">A GOOD LIFE.</a>
+            <a class="brand" href="/"><img src="{{url_for('static', filename='images/AGoodLife_Logo.png')}}" alt="logo"></a>
             <p>An ordinary life. An<br>extraordinary journey.</p>
         </div>
         <nav aria-label="Footer navigation">
-            <a href="/story">Story</a>
-            <a href="/trailer">Trailer</a>
-            <a href="/epk">EPK</a>
-            <a href="/bts">BTS</a>
-            <a href="/filmmakers">Filmmakers</a>
-            <a href="/contact">Contact us</a>
+                <a href="/">Home</a>
+                <a href="/story">The Story</a>
+                <a href="/trailer">Trailer</a>
+                <a href="/epk">EPK</a>
+                <a href="/bts">Behind the Scenes</a>
+                <a href="/filmmakers">Our Team</a>
+                <a href="/contact">Contact Us</a>
         </nav>
         <div class="footer-bottom">
             <span>&copy; 2026 A Good Life. All rights reserved.</span>

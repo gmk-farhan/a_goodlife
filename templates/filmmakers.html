@@ -3,7 +3,7 @@
 {% block title %}Filmmakers | A Good Life{% endblock %}
 
 {% block styles %}
-<link rel="stylesheet" href="{{ url_for('static', filename='team_style.css') }}">
+<link rel="stylesheet" href="{{url_for('static', filename='team_style.css') }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 {% endblock %}
 
@@ -12,13 +12,13 @@
 <!-- HERO SECTION -->
     <section class="hero">
         <div class="label">
-            THE STUDENTS BEHIND GOOD LIFE
+            THE PEOPLE BEHIND GOOD LIFE
         </div>
         <h1>Meet the Team</h1>
         <div class="description">
             <p>
                 Two disciplines. One shared story. Celebrating
-                the film students and web students bringing GOOD
+                the film and web masters bringing A GOOD
                 LIFE to the screen and beyond.
             </p>
         </div>
@@ -27,140 +27,129 @@
     <section class="team-image">
         <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=2000&q=90" alt="The GOOD LIFE student team">
     </section>
+    
     <!-- TEAM CARD -->
         <div class="team-card">
-            <div class="team-number">
-                01 / FILM &amp; PRODUCTION
-            </div>
-            <h2>Film students</h2>
+            <h2>PRODUCTION &amp; DEVELOPMENT</h2>
             <p class="team-description">
-                The student storytellers behind the camera, performances, sound, and edit.
+                The faces behind the camera, performances, sound, edit, design and Development.
             </p>
             <div class="team-divider"></div>
-            <div class="cards">
-                <div class="member">
-                    <div class="member-img">
-                        <img src="{{url_for('static', filename='images/images.png')}}" alt="member photo">
-                    </div>
-                    <div class="member-details">
-                        <h3 class="name">Jacqueline Guzman</h3>
-                        <h3 class="role">Director &amp; Writer</h3>
-                        <p>Bio</p>
-                    </div>
-                    <div class="social-links">
-                        <a href=""><i class="fa fa-instagram" style="font-size:30px"></i></a>
-                        <a href=""><i class="fa fa-linkedin-square" style="font-size:30px"></i></a>
-                        <a href=""><i class="fa fa-envelope" style="font-size:30px"></i></a>
-                    </div>
-                </div>
-                <div class="member">
-                    <div class="member-img">
-                        <img src="{{url_for('static', filename='images/Zhanna_Radova.jpg')}}" alt="member photo">
-                    </div>
-                    <div class="member-details">
-                        <h3 class="name">Zhanna Radova</h3>
-                        <h3 class="role">Producer</h3>
-                        <p>Zhanna Radova is a London-based writer, director and producer.</p>
-                    </div>
-                    <div class="social-links">
+            <section class="team-gallery">
+        <!-- Jacqueline -->
+        <div class="team-member card-1">
+            <img src="{{url_for('static', filename='images/images.png') }}" alt="member image">
+            <div class="details">
+                <h3 class="name">Jacqueline Guzman</h3>
+                <h3 class="role">Director &amp; Writer</h3>
+                <p class="bio">Sara is London-based filmmaker and author, known for documentaries, short films, and psychological fiction.</p>
+                <div class="social-links">
                         <a href="https://www.instagram.com/zhanna.radova/"><i class="fa fa-instagram" style="font-size:30px"></i></a>
                         <a href="https://www.instagram.com/zhanna.radova/"><i class="fa fa-linkedin-square" style="font-size:30px"></i></a>
                         <a href="mailto:zhannaradovaaa@gmail.com"><i class="fa fa-envelope" style="font-size:30px"></i></a>
                     </div>
+            </div>
+        </div>
+        <!-- Zhanna -->
+        <div class="team-member card-2">
+            <img src="{{url_for('static', filename='images/Zhanna_Radova.jpg')}}" alt="member image">
+            <div class="details">
+                <h3 class="name">Zhanna Radova</h3>
+                <h3 class="role">Producer</h3>
+                <p class="bio">Zhanna Radova is a London-based writer, director and producer.</p>
+                <div class="social-links">
+                        <a href="https://www.instagram.com/zhanna.radova/"><i class="fa fa-instagram" style="font-size:30px"></i></a>
+                        <a href="https://www.instagram.com/zhanna.radova/"><i class="fa fa-linkedin-square" style="font-size:30px"></i></a>
+                        <a href="mailto:zhannaradovaaa@gmail.com"><i class="fa fa-envelope" style="font-size:30px"></i></a>
+                    </div>
+            </div>
+        </div>
+        <!-- Lynn -->
+        <div class="team-member card-3">
+            <img src="{{url_for('static', filename='images/Lynn.jpg')}}" alt="member image">
+            <div class="details">
+                <h3 class="name">Lynn Thant Naing</h3>
+                <h3 class="role">Director of Photography, Colorist &amp; Editor</h3>
+                <p class="bio">A Burmese Audio Visual Artist based in London.</p>
+                <div class="social-links">
+                        <a href="https://www.instagram.com/lynnthantnaing/"><i class="fa fa-instagram" style="font-size:30px"></i></a>
+                        <a href="https://www.youtube.com/@ltnaudiovisualinc"><i class="fa fa-youtube-play" style="font-size:30px"></i></a>
+                        <a href="mailto:120914uk@saeinstitute.edu"><i class="fa fa-envelope" style="font-size:30px"></i></a>
                 </div>
             </div>
-            <div class="cards">
-                <div class="member">
-                    <div class="member-img">
-                        <img src="{{url_for('static', filename='images/images.png')}}" alt="member photo">
-                    </div>
-                    <div class="member-details">
-                        <h3 class="name">Lynn Thant Naing</h3>
-                        <h3 class="role">Director of Photography &amp; Editor</h3>
-                        <p>Bio</p>
-                    </div>
-                    <div class="social-links">
-                        <a href=""><i class="fa fa-instagram" style="font-size:30px"></i></a>
-                        <a href=""><i class="fa fa-linkedin-square" style="font-size:30px"></i></a>
-                        <a href=""><i class="fa fa-envelope" style="font-size:30px"></i></a>
-                    </div>
-                </div>
-                <div class="member">
-                    <div class="member-img">
-                        <img src="{{url_for('static', filename='images/Sara_Khethawatt.jpeg')}}" alt="member photo">
-                    </div>
-                    <div class="member-details">
-                        <h3 class="name">Sara Khethawatt</h3>
-                        <h3 class="role">Script Supervisor</h3>
-                        <p>Sara is London-based filmmaker and author, known for documentaries, short films, and psychological fiction.</p>
-                    </div>
-                    <div class="social-links">
+        </div>
+        <!-- Sarah -->
+        <div class="team-member card-4">
+            <img src="{{url_for('static', filename='images/Sara_Khethawatt.jpeg')}}" alt="member image">
+            <div class="details">
+                <h3 class="name">Sara Khethawatt</h3>
+                <h3 class="role">Script Supervisor</h3>
+                <p class="bio">Sara is London-based filmmaker and author, known for documentaries, short films, and psychological fiction.</p>
+                <div class="social-links">
                         <a href="https://www.instagram.com/sarakhethawatt?utm_source=qr"><i class="fa fa-instagram" style="font-size:30px"></i></a>
                         <a href="https://youtube.com/@sarakhethawatt?si=I0NrCw6L2F3UAbim"><i class="fa fa-youtube-play" style="font-size:30px"></i></a>
                         <a href="mailto:120855uk@saeinstitute.edu"><i class="fa fa-envelope" style="font-size:30px"></i></a>
                     </div>
-                </div>
             </div>
-            <div class="cards">
-                <div class="member">
-                    <div class="member-img">
-                        <img src="{{url_for('static', filename='images/Alex_Haslam.jpg')}}" alt="member photo">
+        </div>
+            </section>
+            <section class="team-gallery">
+                <div class="team-member card-5">
+            <img src="{{url_for('static', filename='images/mariana.jpg')}}" alt="member image">
+            <div class="details">
+                <h3 class="name">Mariana Havianets</h3>
+                <h3 class="role">BTS photographer</h3>
+                <p class="bio">London-based photographer and content creator capturing authentic stories through photography and video.</p>
+                <div class="social-links">
+                        <a href="https://www.instagram.com/marianahavianets/"><i class="fa fa-instagram" style="font-size:30px"></i></a>
+                        <a href="https://www.marianahavianets.com"><i class="fa fa-globe" style="font-size:30px"></i></a>
+                        <a href="mailto:mhavianets@gmail.com"><i class="fa fa-envelope" style="font-size:30px"></i></a>
                     </div>
-                    <div class="member-details">
-                        <h3 class="name">Alex Haslam-Jones</h3>
-                        <h3 class="role">Sound Recordist &amp; Boom Operator</h3>
-                        <p>If you're going to do it, do it with style.</p>
-                    </div>
-                    <div class="social-links">
+            </div>
+        </div>
+        <!-- Alex -->
+        <div class="team-member card-6">
+            <img src="{{url_for('static', filename='images/Alex_Haslam.jpg')}}" alt="member image">
+            <div class="details">
+                <h3 class="name">Alex Haslam-Jones</h3>
+                <h3 class="role">Sound Recordist &amp; Boom Operator</h3>
+                <p class="bio">If you're going to do it, do it with style.</p>
+                <div class="social-links">
                         <a href="https://www.instagram.com/ealexhj/"><i class="fa fa-instagram" style="font-size:30px"></i></a>
                         <a href="https://www.instagram.com/ealexhj/"><i class="fa fa-linkedin-square" style="font-size:30px"></i></a>
                         <a href="mailto:121229uk@saeinstitute.edu"><i class="fa fa-envelope" style="font-size:30px"></i></a>
                     </div>
-                </div>
             </div>
-            <div class="team-card">
-            <div class="team-number">
-                02 / DESIGN &amp; DEVELOPMENT
-            </div>
-            <h2>Web students</h2>
-            <p class="team-description">
-                The student designers and developers behind
-                the film's online home.
-            </p>
-            <div class="team-divider"></div>
-            <div class="cards">
-                <div class="member">
-                    <div class="member-img">
-                        <img src="{{url_for('static', filename='images/ppp.jpg')}}" alt="member photo">
-                    </div>
-                    <div class="member-details">
-                        <h3 class="name">Farhan</h3>
-                        <h3 class="role">Web Developer</h3>
-                        <p>Web developer passionate about creative collaboration, games, film, and exploring the world.</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/gmk._0/"><i class="fa fa-instagram" style="font-size:30px"></i></a>
-                        <a href="https://github.com/gmk-farhan/"><i class="fa fa-github" style="font-size:30px"></i></a>
-                        <a href="mailto:gmknaxim@gmail.com"><i class="fa fa-envelope" style="font-size:30px"></i></a>
-                    </div>
-                </div>
-                <div class="member">
-                    <div class="member-img">
-                        <img src="{{url_for('static', filename='images/Joao.jpeg')}}" alt="member photo">
-                    </div>
-                    <div class="member-details">
-                        <h3 class="name">Joao</h3>
-                        <h3 class="role">Web designer</h3>
-                        <p>Creative Web Development student passionate about music, technology, design and digital marketing.</p>
-                    </div>
-                    <div class="social-links">
+        </div>
+        <!-- Joao -->
+        <div class="team-member card-7">
+            <img src="{{url_for('static', filename='images/joao.jpeg')}}" alt="member image">
+            <div class="details">
+                <h3 class="name">Joao</h3>
+                <h3 class="role">Web designer</h3>
+                <p class="bio">Creative Web Development student passionate about music, technology, design and digital marketing.</p>
+                <div class="social-links">
                         <a href="https://www.instagram.com/dj_ramone?avpt=MTZrbG5pMjFxZWFrMA%3D%3D&utm_source=qr"><i class="fa fa-instagram" style="font-size:30px"></i></a>
                         <a href="https://www.instagram.com/dj_ramone?avpt=MTZrbG5pMjFxZWFrMA%3D%3D&utm_source=qr"><i class="fa fa-linkedin-square" style="font-size:30px"></i></a>
                         <a href="mailto:120044uk@saeinstitute.edu"><i class="fa fa-envelope" style="font-size:30px"></i></a>
                     </div>
-                </div>
             </div>
         </div>
+        <!-- Farhan -->
+        <div class="team-member card-8">
+            <img src="{{url_for('static', filename='images/ppp.jpg')}}" alt="member image">
+            <div class="details">
+                <h3 class="name">Farhan</h3>
+                <h3 class="role">Web Developer</h3>
+                <p class="bio">Web developer passionate about creative collaboration, games, film, and exploring the world.</p>
+                <div class="social-links">
+                        <a href="https://www.instagram.com/gmk._0/"><i class="fa fa-instagram" style="font-size:30px"></i></a>
+                        <a href="https://github.com/gmk-farhan/"><i class="fa fa-github" style="font-size:30px"></i></a>
+                        <a href="mailto:gmknaxim@gmail.com"><i class="fa fa-envelope" style="font-size:30px"></i></a>
+                    </div>
+            </div>
+        </div>
+            </section>
         </div>
     <!-- CLOSING BANNER -->
     <section class="message">

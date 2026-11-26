@@ -30,7 +30,7 @@
             Your browser does not support HTML video.
         </video>
     </section>
-         <!-- FILM CREDITS -->
+         <!-- FILM CREDITS --> 
     <section class="credits">
         <div class="credits-heading">
             <div class="tagline">
@@ -63,10 +63,26 @@
                 <span class="name">Sara Khethawatt</span>
             </div>
             <div class="item">
+                <span class="role">BTS photographer</span>
+                <span class="name">Mariana Havianets</span>
+            </div>
+            <div class="item">
                 <span class="role">Lead Role</span>
                 <span class="name">Peter Damian</span>
             </div>
         </div>
+    </section>
+    <section class="team-link">
+                <img src="{{ url_for('static', filename='home-city.jpg') }}" alt="A person overlooking the city at sunset">
+                <div class="info">
+                    <div class="tagline">
+                        <span class="tag-line"></span>
+                        The creative team
+                    </div>
+                    <h2>A story told together.</h2>
+                    <p>Meet the creative team bringing the world of A Good Life to the screen.</p>
+                    <a href="/filmmakers">Meet the Team <span aria-hidden="true">&nearr;</span></a>
+                </div>
     </section>
 </div>
 {% endblock %}
